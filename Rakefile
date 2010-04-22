@@ -19,6 +19,23 @@ RDOC_DIR="doc/html"
 
 CLEAN << RDOC_DIR 
 
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gemspec|
+    gemspec.name = "simplehttp"
+    gemspec.summary = "simple_http: Simple Http client lib."
+    gemspec.description = "simple_http: Simple Http client lib."
+    gemspec.email = "josh@technicalpickles.com"
+    gemspec.homepage = "http://github.com/wilkerlucio/simplehttp"
+    gemspec.authors = ["Josh Nichols", "Wilker Lucio"]
+    
+    gemspec.files.exclude "pkg/**/*"
+    gemspec.files.exclude "test/**/*"
+  end
+  Jeweler::GemcutterTasks.new
+rescue LoadError
+  puts "Jeweler not available. Install it with: gem install jeweler"
+end
 
 # This is the task that generates the +rdoc+ documentation from the
 # source files. Instantiating Rake::RDocTask automatically generates a

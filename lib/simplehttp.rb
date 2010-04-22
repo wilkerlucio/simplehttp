@@ -46,7 +46,7 @@ require 'base64'
 #    sh.get
 class SimpleHttp
   
-  VERSION='0.1.4'
+  VERSION='0.1.5'
   
   # Host component of proxy uri
   attr_accessor :proxy_host
