@@ -192,9 +192,7 @@ class SimpleHttp
   #
   
   def basic_authentication usr, pwd
-    str = Base64.encode64("#{usr}:#{pwd}")
-    str = "Basic #{str}"
-    @request_headers["Authorization"]=str
+    @basic_auth = [usr, pwd]
   end
   
   #
@@ -332,7 +330,8 @@ class SimpleHttp
     http = Net::HTTP.new(@uri.host, @uri.port, 
                          @proxy_host, @proxy_port, @proxy_user, @proxy_pwd)
     http.use_ssl = @uri.scheme == 'https'
-  
+    request.basic_auth(@basic_auth[0], @basic_auth[1]) if @basic_auth
+    
     # add custom request headers.
     @request_headers.each {|key,value|
       request[key]=value;
