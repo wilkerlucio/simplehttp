@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{simplehttp}
-  s.version = "0.1.5"
+  s.name = %q{fresh_simplehttp}
+  s.version = "0.1.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Josh Nichols", "Wilker Lucio"]
+  s.authors = ["Wilker Lucio"]
   s.date = %q{2010-04-22}
-  s.description = %q{simple_http: Simple Http client lib.}
-  s.email = %q{josh@technicalpickles.com}
+  s.description = %q{simple_http: Simple Http client lib. Use to do http requests without noise.}
+  s.email = %q{wilkerlucio@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE",
      "README",
