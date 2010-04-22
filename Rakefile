@@ -22,12 +22,12 @@ CLEAN << RDOC_DIR
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gemspec|
-    gemspec.name = "simplehttp"
+    gemspec.name = "fresh_simplehttp"
     gemspec.summary = "simple_http: Simple Http client lib."
-    gemspec.description = "simple_http: Simple Http client lib."
-    gemspec.email = "josh@technicalpickles.com"
+    gemspec.description = "simple_http: Simple Http client lib. Use to do http requests without noise."
+    gemspec.email = "wilkerlucio@gmail.com"
     gemspec.homepage = "http://github.com/wilkerlucio/simplehttp"
-    gemspec.authors = ["Josh Nichols", "Wilker Lucio"]
+    gemspec.authors = ["Wilker Lucio"]
     
     gemspec.files.exclude "pkg/**/*"
     gemspec.files.exclude "test/**/*"
